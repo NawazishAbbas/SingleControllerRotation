@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lrH-Ae-jsq">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="DeviceRotationOnlyOneViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeI-4N-2cg">
+                                <rect key="frame" x="135.66666666666666" y="433" width="142.99999999999997" height="30"/>
+                                <state key="normal" title="Push View Controller"/>
+                                <connections>
+                                    <action selector="presentButtonPressWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHA-Ib-kdV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zeI-4N-2cg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Cy-Bu-zeB"/>
+                            <constraint firstItem="zeI-4N-2cg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eox-JT-zf9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main" id="GgY-B1-zGT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="387"/>
+        </scene>
+        <!--PresentedViewController-->
+        <scene sceneID="Ppp-c9-JFw">
+            <objects>
+                <viewController storyboardIdentifier="PresentedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D7X-eA-jqO" userLabel="PresentedViewController" customClass="PresentedViewController" customModule="DeviceRotationOnlyOneViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ZD-YD-3x1"/>
+                        <viewControllerLayoutGuide type="bottom" id="L2A-0E-uSx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PcW-oQ-GSR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catfish" translatesAutoresizingMaskIntoConstraints="NO" id="sZ8-pU-tpa">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vc-QV-0pZ">
+                                <rect key="frame" x="107" y="528" width="200" height="60"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.81568627449999997" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Lge-Or-g4C"/>
+                                    <constraint firstAttribute="height" constant="60" id="xJI-dD-0g6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="didDismissButtonPressWithSender:" destination="D7X-eA-jqO" eventType="touchUpInside" id="jC6-W9-4et"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sZ8-pU-tpa" firstAttribute="centerY" secondItem="PcW-oQ-GSR" secondAttribute="centerY" id="QRN-te-A18"/>
+                            <constraint firstItem="0vc-QV-0pZ" firstAttribute="centerX" secondItem="PcW-oQ-GSR" secondAttribute="centerX" id="jcB-hD-onG"/>
+                            <constraint firstItem="0vc-QV-0pZ" firstAttribute="top" secondItem="sZ8-pU-tpa" secondAttribute="bottom" constant="30" id="nPr-Kr-B4y"/>
+                            <constraint firstItem="sZ8-pU-tpa" firstAttribute="centerX" secondItem="PcW-oQ-GSR" secondAttribute="centerX" id="wPa-Ps-8tv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="View Controller" id="W5m-HL-hxa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Coc-2u-F8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="euT-oP-4Vk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lrH-Ae-jsq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qcC-oS-IxE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wg0-dN-7MK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7I-Mj-eD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="catfish" width="100" height="100"/>
+    </resources>
+</document>
